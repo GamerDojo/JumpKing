@@ -13,19 +13,21 @@ public class LevelGenerator : MonoBehaviour
     private void GenerateLevel()
     {
         float currentY = 0;
-        for(int i = 0; i < nrOfPlatforms; i++)
+        for (int i = 0; i < nrOfPlatforms; i++)
         {
             currentY += Random.Range(minYDistance, maxYDistance);
             float currentX;
             if (i % 2 == 0) // daca i este par 
             {
-                currentX =-Random.Range(minXDistance, maxXDistance);
+                currentX = -Random.Range(minXDistance, maxXDistance);
             }
             else // daca i este impar 
             {
                 currentX = Random.Range(minXDistance, maxXDistance);
             }
-            Instantiate(platformPrefab,new Vector3(currentX,currentY,0),Quaternion.identity);
+            var platform = Instantiate(platformPrefab, new Vector3(currentX, currentY, 0), Quaternion.identity);
+            // score of the platform 
+            platform.GetComponent<Platform>().score = i + 1;
         }
     }
 
