@@ -93,6 +93,7 @@ public class PlayerController : MonoBehaviour
         if (transform.position.y < deathY)
         {
             transform.position = initialPosition;
+            rb.velocity = new Vector2(0, 0);
         }
 
         mainCamera.orthographicSize = Mathf.SmoothDamp(mainCamera.orthographicSize, Mathf.Lerp(5, 10, rb.velocity.magnitude / jumpForce), ref zoomVel, .2f);
