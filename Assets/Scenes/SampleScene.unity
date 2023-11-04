@@ -236,6 +236,7 @@ GameObject:
   - component: {fileID: 465881908}
   - component: {fileID: 465881907}
   - component: {fileID: 465881909}
+  - component: {fileID: 465881910}
   m_Layer: 6
   m_Name: Ground
   m_TagString: Untagged
@@ -336,6 +337,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &465881910
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 465881906}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f710a3f43db30f44883c58cd18235f70, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  score: 0
 --- !u!1 &467768965 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3873193679623664514, guid: b13b4eb44ec05144bae403cb955a4b13, type: 3}
@@ -779,6 +793,10 @@ PrefabInstance:
       propertyPath: chargeBar
       value: 
       objectReference: {fileID: 1083949512}
+    - target: {fileID: 1756629104, guid: b13b4eb44ec05144bae403cb955a4b13, type: 3}
+      propertyPath: scoreText
+      value: 
+      objectReference: {fileID: 1355759941}
     - target: {fileID: 662631197497685034, guid: b13b4eb44ec05144bae403cb955a4b13, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.09008551
