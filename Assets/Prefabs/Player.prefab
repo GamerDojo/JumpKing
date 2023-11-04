@@ -202,6 +202,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0f991cb086a33d41ac1894bbc527d40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scoreText: {fileID: 0}
   chargeBar: {fileID: 0}
   groundCheck: {fileID: 4418145529837203417}
   jumpForce: 15
