@@ -26,7 +26,7 @@ public class PlayerController : MonoBehaviour
     private void GroundCheck()
     {
         int excludePlayer = ~0 - LayerMask.GetMask("Player");
-        var hit = Physics2D.BoxCast(groundCheck.transform.position, new Vector2(1.1f, 1), 0, Vector2.down, 0.15f, excludePlayer);
+        var hit = Physics2D.OverlapBox(groundCheck.transform.position, new Vector2(.49f, .1f), 0,excludePlayer, excludePlayer);
         if (hit)
         {
             // the platform contains the score as a int.ToString() in the tag 
